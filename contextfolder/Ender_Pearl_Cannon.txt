@@ -1,0 +1,102 @@
+Ender Pearl Cannon
+ is a mechanism to teleport player or entities to a specific location on the server. It is widely used on the 
+Unstable SMP
+.
+
+Mechanism
+
+Ender Pearl Cannon use TNT duper to provide momentum for aligned ender pearl and offsets velocity to determine target location. The pearl loads the chunks during travelling.
+
+History
+
+The Invisible Mafia
+ used a pearl cannon to transport pearls from 
+Spawn
+ to 
+Mafia Stasis Chambers
+, which 
+Spoke
+ went through to destroy the stases.
+
+Wemmbu
+ and 
+Egg
+ were exiled to 
+Great Sea
+ through a pearl cannon after 
+Jaden
+ took Egg as hostage and forced him to clear his inventory.
+
+Wemmbu traveled to 
+Far Lands
+ to retrieve mace from 
+Sharpness
+ through a pearl cannon built by 
+4CVIT
+. Later 
+the Avengers
+ went through the same pearl cannon to hunt down Wemmbu.
+
+The Director
+ escaped through an ender pearl cannon near 
+BAT Headquarters
+, and 
+BAT
+ followed them through, only to find themselves in a director-trimmed netherite zombie trap. 
+Parrot
+ changed the zombie trap to a void lava TNT dog trap and asked 
+Theo
+ to drain and corner 
+the Invisible Knight
+ and force them to use the same cannon in order to force reveal their identity.
+
+Spoke
+ went through a pearl cannon again built by 
+4CVIT
+ that leads to a lighthouse and 
+JamatoP
+'s flowery mountain house near 
+Far Lands
+. 
+Wemmbu
+ went through the same pearl cannon only to find he go to the wrong quadrant of the Far Lands.
+
+Spoke
+ built a simplified pearl cannon for him, 
+Jumper
+ and 
+Zam
+ to travel faster than 
+Wemmbu
+ and 
+FlameFrags
+ who had elytra or riptide trident to 
+the Law
+ base.
+
+Null Hunters
+ had a pearl cannon at coords (50,000, 50,000) to "Road of NULL" that was offset by 
+Anticsparty06
+ and later destroyed by 
+_x_6_00
+ when Spoke and Jumper tried to forcefully go through.
+
+Mapicc
+ led Spoke and Jumper through an ender pearl cannon that leads near 
+Far Lands
+ when escaping 
+Null Hunters
+ but 
+Mapicc
+ told them the target location was wrong so they had to find Mapicc and Revenant's camp in the Far Lands.
+
+JamatoP
+ forced Spoke to travel back to 
+Spawn
+ area from the top of 
+Purgatory
+ arena, which Spoke countered by secretly throwing another pearl just before the pearl landed in the ruin of 
+Capitol City
+.
+
+Navigation

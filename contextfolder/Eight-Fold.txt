@@ -1,0 +1,16 @@
+Eight-Fold
+ is a game in 
+Unstable Universe
+. It's very similar to both Poker and Blackjack as well as the Paper Game.
+
+In this game, players are each dispensed two different items. Each item has a different point value, ranging from 1 (dirt) to 8 (netherite ingot) points. 
+
+Players place bets on their victory of having the best hand. Players must match or exceed the bet of the others and whoever has the best hand wins. Players can also fold, automatically losing the game. 
+
+People who have played Eight-Fold: 
+
+ParrotX2
+
+Rasplin
+
+Navigation

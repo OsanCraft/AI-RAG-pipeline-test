@@ -1,0 +1,113 @@
+"
+I don't think we had any improvements in our quality of life.
+" — 
+This article is missing an image. Please help the 
+Unstable Universe
+ Wiki by 
+uploading
+ and 
+adding
+ one.
+A 
+Chunk ban
+ is a real Minecraft exploit commonly used throughout the entirety of 
+Unstable Universe
+. It has been used for various prisons, traps, and other notable structures. 
+
+Mechanics
+
+It works by overloading a specific area with massive amounts of NBT (named binary tag) data. It works as Minecraft servers usually cap the maximum size of a single network packet (usually around 2MB). When a player tries to enter the area, the server attempts to send all local data to their computer. Because the data exceeds the network limit, the connection breaks, and the player is kicked.
+
+There are many different ways to achieve this:
+
+Shulker/book method: People pack a shulker with a large quantity of books containing highly complex data, usually done by filling them with invisible Unicode characters.
+
+It is possible to do this with tile entities but its much more difficult. (e.g. furnaces, signs)
+
+Edit: This got patched in 1.21.11, as a result of the network packet increasing.
+
+There are also instances of people executing this ban with placed maps in specific servers, most notably Donut SMP.
+
+There are two different ways to ban:
+
+Area ban: bans any people entering a specific area
+
+Inventory ban: bans anyone who holds the item in their inventory, permanently banning them (this one requires more NBT data)
+
+There is also a way to lag or even crash an entire server but that falls more into the category of a lag machine or a memory ban rather then a chunk ban.
+
+A memory ban is a Minecraft bug that is used to crash servers and revert the server to minutes prior to the memory ban being activated. In Unstable Universe, Memory bans were made by 
+PrinceZam
+ to stop 
+Parrot
+, 
+Rekrap
+, 
+Derapchu
+ and 
+JumperWho
+ from breaking 
+Wifies
+ out of a prison. They are also used for duping purposes.
+
+History
+
+PrinceZam
+ and 
+Wemmbu
+ chunk ban 
+TheRealSquiddo
+.
+
+RealReeon
+ is chunk banned by PrinceZam.
+
+PrinceZam and Wemmbu attempt to chunk ban 
+SpokeIsHere
+ but fail.
+
+Arcn
+ and 
+Only_A_Squid
+ are both chunk banned by PrinceZam.
+
+Sharooh
+ is chunk banned by PrinceZam.
+
+Fantst
+ and 
+Sharkilz_
+ are chunk banned by PrinceZam.
+
+Wifies
+ and later SpokeIsHere are both chunk banned.
+
+ParrotX2
+ and a team of people break out every player who was chunk banned, though Fantst chunk bans himself again.
+
+Parrot puts chunk bans around 
+Wemmbu's Civilization
+ to stop intruders, but only manages to put three.
+
+Wemmbu destroys Fantst's chunk ban.
+
+Pangi
+ is chunk banned in the nether as he tries to escape a prison by 
+ClownPierce
+.
+
+There are chunk bans in 
+Proton
+. Wifies is temporarily chunk banned in one of them. A guard eventually free's him from the Chunk ban. 
+Kenadian
+ builds a wither bore to destroy the chunk bans in Proton and escape.
+
+Horace_Altman
+ sets up chunk bans around the 
+End Civilization
+.
+
+Boosfer
+ accidentally chunk bans himself, but is later freed when End Civilization is raided.
+
+Navigation

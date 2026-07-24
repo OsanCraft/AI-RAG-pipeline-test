@@ -1,0 +1,148 @@
+The 
+Orbital Strike Cannon
+ is a Minecraft build featured in 
+Unstable Universe
+ utilizing various mechanics to be able to drop hundreds of TNT onto a chosen location. The machine was designed by 
+@cubicmetre
+.
+
+Orbital Strike Cannon is designed to use only in the Overworld, making 
+Wemmbu
+ passive when fighting 
+the Law
+ in the End.
+
+How It Works
+
+It works by duping TNT in 'lazy' chunks, where thousands of duplicated TNT can stay in stasis instead of instantly exploding.  
+
+"A lazy chunk is a chunk that is near the edge of loaded chunks that still processes redstone but not entities. For example when something goes through a Nether portal it loads a 3x3 of entity processing chunks and then a ring around that of lazy chunks (5x5 in total)".
+ (Reddit, 2024, not paraphrased)
+
+In lazy chunks, TNT can gain momentum from other TNT explosions but will not move until in a not lazy chunk. This can be abused by giving TNT loads of momentum with other TNT and then either loading it and moving it to another chunk.
+
+The coordinates (X + Z) can be inputted in a book in a control room (in the Nether) which is then delivered and decompiled via a chest minecart.
+
+Because of the way Minecraft renders entities, it can go through unloaded chunks as long as the destination is in a loaded chunk.
+
+Other then the classic stab shot and nuke shot, other geometric shapes are possible to make, as showcased by 
+Only A Squid
+.
+ Another shape (square) also appeared canonically to kill 
+TruOriginal
+.
+
+No, the UU orbitals are not actually possible. The wind charge tech (mirror reciever) tech was patched and it wouldn't logically work even if it wasn't patched, as complained by CubicMeter. 
+ 
+[1]
+Ignore any people who say otherwise, unless they actually have valid proof.
+
+Instead, they are replicated by a clever carpet mod script. 
+
+History
+
+Wemmbu
+ shows 
+Spoke
+ that he can activate an orbital strike cannon using a fishing rod.
+
+SpokeIsHere
+ destroys 
+The Wonders
+ using an orbital strike cannon. Parrot builds an orbital strike cannon to stop the Wonders from being destroyed but fails.
+
+Spoke destroys a sky base containing duped items using an orbital strike cannon.
+
+Spoke accidentally destroys 
+Jepexx
+'s base using an orbital strike cannon.
+
+ParrotX2
+ and 
+Wifies
+ help Wemmbu build an orbital strike cannon. Parrot and Wifies then use it to destroy the 
+Treasure Hunters
+ headquarters.
+
+The 
+Zam Empire
+ destroys 
+Wemmbu
+'s orbital strike cannon and adds a giant obsidian shield over the empire to stop an orbital strike cannon from destroying it. PrinceZam gets too confident after seeing Wemmbu's weakened state and he removes the shield. Little did he know, Wemmbu was ready to destroy the empire.
+
+ClownPierce
+ uses an orbital strike cannon to destroy PrinceZam's base in a prison as 
+Pangi
+ tried to escape to the nether. Wemmbu and 
+eggchan
+'s base is also destroyed by ClownPierce.
+
+ParrotX2
+ uses an orbital strike cannon and connects it with a line of mirror receivers to remotely activate it without a fishing rod. He used it alongside 
+BAT
+ to kill 
+TruOriginal
+, the hacker that was hunting Parrot.
+
+Wemmbu discovers an array of repeating orbital strike cannons in the farlands. Later on, he uses them to destroy the old Law base while trying to find 
+FlameFrags
+. He then asks 
+Jaden_MAN
+ if he knew where FlameFrags was. Jaden stalls and eventually attacks Wemmbu. After Wemmbu defeats Jaden, he destroys his Pirate castle. Wemmbu goes to FlameFrags' old base where he kills another player who dropped a compass leading to where FlameFrags was. After finally finding FlameFrags, Wemmbu uses his orbital strike cannons to finally defeat him and be considered the strongest player.
+
+Wemmbu uses some of his orbital strike cannons against 
+Boosfer
+ and his bandits in BranzyCraft's abandoned base. He manages to kill all the bandits except for 
+Boomie
+. Wemmbu chases them down 
+The Great Sea
+ where he finally kills Boomie using his orbital strike cannons. 
+
+ParrotX2 and TheobaldTheBird impersonate Wemmbu. While Wemmbu chases them down, he tries to kill them using his stab shots from his orbital strike cannons. 
+
+Wemmbu uses three orbital strike cannon shots during his 
+fight with FlameFrags against 1000 players
+ to kill some of the players. After they won the battle, Wemmbu runs out of orbital strike cannons. He tries to use one against FlameFrags but FlameFrags dodges it.
+
+The Law builds an orbital strike cannon to destroy the Pirates' base, but Wemmbu and eggchan destroy it before it can fire. 
+
+Wemmbu returns to the Farlands to finally get his orbital strike cannons back. Wemmbu then uses the orbital strike cannons to fight against the Law, banning dozens of players and resulting in their long-awaited downfall. 
+
+Arachnid members request Wemmbu to join their civilization but Wemmbu kills all of them with a stab shot.  
+
+Wemmbu goes to Steampunk City and duels ShoeBilly but does not kill him after breaking his armor. He uses orbitals which Arachnid told him not to do and he gets scolded.  
+
+Wemmbu uses orbitals to nuke Highwater and take all of the opposing side by surprise. They win the fight.  
+
+Wemmbu nukes dozens of capital city inhabitants and kills them all. He is used as the primary factor for the takeover of Parrot's kingdom.  
+
+Trivia
+
+It's important to note that the orbital strike cannons featured in Wemmbu's videos aren't actually possible as the cannon's firing location is predetermined, along with other technical reasons. They cannot fire instantly in real Minecraft as it is not possible to change game speed locally like Wemmbu did in the 
+Far Lands
+.
+
+Although 
+Wemmbu
+ is the first documented player to use the 
+Orbital Strike Cannons
+, server lore implies that 
+The First Generation Players
+ may have utilized them years prior.
+
+Navigation
+
+↑
+ 
+https://www.reddit.com/r/technicalminecraft/comments/1emlqir/can_anyone_give_me_a_basic_rundown_on_how/
+
+↑
+ 
+https://www.youtube.com/watch?v=GC6XCbQlSUw
+
+↑ 
+3.0
+ 
+3.1
+ 
+https://www.youtube.com/watch?v=lUCXQC0PdaY

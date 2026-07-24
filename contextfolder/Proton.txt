@@ -1,0 +1,53 @@
+Nothing is certain here except for one thing— once you're inside, there's no escape. But I promise that someday, somehow, I'm gonna break out.
+— 
+ParrotX2
+ to 
+Escaping Proton: Minecraft's Most Secure Prison
+
+Proton
+ was a prison built in 
+Unstable Universe
+ designed to hold many players at once. This prison was made for 
+ClownPierce
+’s entertainment, as he wanted to see what players would do when faced with it.
+
+History
+
+Escaping Proton: Minecraft's Most Secure Prison
+
+Kenadian designs the prison. The prison is built and 
+Eggchan
+, 
+ParrotX2
+, 
+Kenadian
+, 
+Wifies
+, 
+JumperWho
+, 
+Derapchu
+, and 
+Rekrap2
+ are trapped in it.
+
+They managed to escape the prison with help from 
+Leow0ok
+ and 
+Wemmbu
+. 
+
+Kenadian
+ is still trapped in the prison but they teleport him out using an ender pearl stasis chamber hidden in Kenadian’s base. 
+
+Design
+
+The prison is made of three main rings. Each ring is circle shaped and large, about the size of a biome. The cell is basically normal Minecraft terrain, except there was no sand or lava. On the borders of each cell are chunk-banned walls. There were only a few spots that sometimes had an inactive chunk ban, and they are hallways connecting the three cells. In the middle of the three rings is the control tower, and outside of all of it, are chunk-banned crying obsidian walls so thick that it goes outside render distance.
+
+The hallways connecting the three cells are usually chunk-banned at the entrance, and the chunk bans are only temporary turned off when the prisoners are getting moved. There middle of these hallways are not chunk banned because there are solitary confinement cells located in between.
+
+Around every hour, the players are moved to another cell through the hallways connecting the three cells by invisible armed guards. The guards are armed with things like splash potions of poison to control misbehaving prisoners. Each cell is usually designed to hold two prisoners. Each prisoner would usually see the same person every six hours.
+
+When prisoners misbehave, the guards take the prisoner into a small solitary confinement cell for hours and even days depending on what the prisoner did. The cell is located underneath each hallway connecting the three cells. There are two per hallway. The cell has a calibrated skulk sensor connected to an inactive chunk ban. If the player were to place or break any blocks, it would activate the chunk ban.
+
+Navigation
