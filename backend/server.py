@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from rag_bot import (
+from backend.rag_bot import (
     load_and_chunk_documents,
     build_or_load_embeddings,
     semantic_search,
