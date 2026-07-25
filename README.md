@@ -1,8 +1,8 @@
-# AI Modeltests
+# LocalRAG Chat
 
 ## Overview
 
-AI Modeltests is a local Retrieval-Augmented Generation (RAG) chat assistant that answers questions from a private corpus of text files. The app uses:
+LocalRAG Chat is a local Retrieval-Augmented Generation (RAG) chat assistant that answers questions from a private corpus of text files. The app uses:
 
 - a Python Flask backend for document indexing, semantic search, and answer generation
 - a React + Vite frontend with a chat-style UI
