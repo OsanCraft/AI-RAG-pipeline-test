@@ -216,8 +216,8 @@ This generates cleaned article text files under `raw_scrapes/`.
 
 ### Frontend cannot reach backend
 
-- Confirm backend is running on `http://127.0.0.1:5000`
-- Confirm `client/src/Ragquery.jsx` still points to `API_URL = "http://127.0.0.1:5000/api/query"`
+- Confirm backend is running on `http://127.0.0.1:5050`
+- Confirm `client/src/Ragquery.jsx` still points to `API_URL = "http://127.0.0.1:5050/api/query"`
 - If ports differ, update that URL in the frontend
 
 ### Embeddings cache issues

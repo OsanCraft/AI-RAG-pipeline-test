@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const STORAGE_KEY = "tv-chat-history";
-const API_URL = "http://127.0.0.1:5000/api/query";
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5050/api/query";
 const generateId = () => `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
 const makeChatTitle = (text) => {
   const clean = text.trim().replace(/\s+/g, " ");
