@@ -15,7 +15,7 @@ CORS(app)  # allows the React dev server (different port) to call this API
 # re-embedding on every question would make each answer take way longer than it needs to.
 print("🤖 Loading documents and embeddings...")
 chunks = load_and_chunk_documents(DOCS_DIR)
-chunk_embeddings = build_or_load_embeddings(chunks)
+chunk_embeddings, normalized_chunk_embeddings = build_or_load_embeddings(chunks)
 print("✅ Backend ready.")
 
 
@@ -27,7 +27,7 @@ def query():
     if not question:
         return jsonify({"error": "No question provided"}), 400
 
-    top_chunks = semantic_search(question, chunks, chunk_embeddings, n=5)
+    top_chunks = semantic_search(question, chunks, chunk_embeddings, normalized_chunk_embeddings=normalized_chunk_embeddings, n=5)
     answer = ask_strict_ai(question, top_chunks)
 
     return jsonify({"answer": answer})

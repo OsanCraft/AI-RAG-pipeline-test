@@ -19,9 +19,12 @@ AI_Modeltests/
 ├── backend/
 │   ├── Dockerfile
 │   ├── __init__.py
+│   ├── contextfolder/
+│   │   └── *.txt
 │   ├── embeddings_cache.pkl
 │   ├── fetch_youtube.py
 │   ├── rag_bot.py
+│   ├── requirements.txt
 │   ├── server.py
 │   └── webscraper.py
 ├── client/
@@ -35,8 +38,6 @@ AI_Modeltests/
 │       ├── Ragquery.jsx
 │       ├── index.css
 │       └── main.jsx
-├── contextfolder/
-│   └── *.txt
 ├── docker-compose.yml
 ├── .venv/
 ├── LICENSE
@@ -51,7 +52,7 @@ AI_Modeltests/
 
 The backend lives in [backend/server.py](backend/server.py) and exposes a Flask endpoint at `/api/query`.
 
-It loads the document corpus from `contextfolder/`, creates or loads embeddings, and uses Ollama to answer questions based on the most relevant chunks.
+It loads the document corpus from the backend's [backend/contextfolder](backend/contextfolder) directory, creates or loads embeddings, and uses Ollama to answer questions based on the most relevant chunks. The backend now reuses cached embeddings and pre-normalized vectors to reduce repeated work during query handling.
 
 ### Frontend
 
@@ -109,6 +110,20 @@ npm run dev
 Open the Vite URL shown in the terminal, usually `http://localhost:5173`.
 
 ---
+
+## Performance notes
+
+- Embeddings are cached in [backend/embeddings_cache.pkl](backend/embeddings_cache.pkl) so the backend can reuse previously computed vectors across restarts when the corpus has not changed.
+- The search path now uses pre-normalized vectors for cosine similarity, which reduces per-query overhead and improves response latency for repeated requests.
+- If you change the document corpus significantly, delete [backend/embeddings_cache.pkl](backend/embeddings_cache.pkl) and restart the backend to force a rebuild.
+
+## Testing
+
+Run the focused regression test with:
+
+```bash
+.venv/bin/python -m pytest backend/tests/test_rag_bot.py
+```
 
 ## Useful files
 

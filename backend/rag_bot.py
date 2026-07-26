@@ -8,10 +8,11 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # pip install langchain-text-splitters numpy --break-system-packages
 # Also run: ollama pull nomic-embed-text
 
-DOCS_DIR = "./contextfolder"
+BACKEND_DIR = os.path.dirname(os.path.abspath(__file__))
+DOCS_DIR = os.path.join(BACKEND_DIR, "contextfolder")
 MODEL_NAME = "qwen2.5:3b"          # generation model - answers the question
 EMBED_MODEL = "nomic-embed-text"   # embedding model - turns text into meaning-vectors for search
-CACHE_FILE = "./embeddings_cache.pkl"
+CACHE_FILE = os.path.join(BACKEND_DIR, "embeddings_cache.pkl")
 
 
 def load_and_chunk_documents(folder):
@@ -57,8 +58,21 @@ def embed_text(text):
     return response["embedding"]
 
 
+def normalize_vectors(vectors):
+    """Returns unit-length vectors so cosine similarity can be computed efficiently."""
+    vectors = np.asarray(vectors, dtype=np.float32)
+    norms = np.linalg.norm(vectors, axis=1, keepdims=True)
+    safe_norms = np.where(norms == 0, 1.0, norms)
+    return vectors / safe_norms
+
+
+def build_context_text(chunks):
+    """Formats retrieved chunks into a compact prompt context."""
+    return "\n\n".join([f"[Source: {chunk['source']}]\n{chunk['text']}" for chunk in chunks])
+
+
 def build_or_load_embeddings(chunks):
-    """Returns a numpy array of embeddings for every chunk, using a cache when possible."""
+    """Returns a numpy array of embeddings and their normalized form, using a cache when possible."""
     fingerprint = get_corpus_fingerprint(chunks)
 
     if os.path.exists(CACHE_FILE):
@@ -66,7 +80,9 @@ def build_or_load_embeddings(chunks):
             cached = pickle.load(f)
         if cached.get("fingerprint") == fingerprint:
             print("✅ Loaded cached embeddings (no changes detected in source files).")
-            return np.array(cached["embeddings"])
+            embeddings = np.asarray(cached["embeddings"], dtype=np.float32)
+            normalized_embeddings = np.asarray(cached.get("normalized_embeddings", normalize_vectors(embeddings)), dtype=np.float32)
+            return embeddings, normalized_embeddings
         else:
             print("📄 Source files changed since last run - re-embedding...")
 
@@ -75,38 +91,50 @@ def build_or_load_embeddings(chunks):
         print(f"  Embedding chunk {i}/{len(chunks)}...")
         embeddings.append(embed_text(chunk["text"]))
 
-    embeddings = np.array(embeddings)
+    embeddings = np.asarray(embeddings, dtype=np.float32)
+    normalized_embeddings = normalize_vectors(embeddings)
 
     with open(CACHE_FILE, "wb") as f:
-        pickle.dump({"fingerprint": fingerprint, "embeddings": embeddings}, f)
+        pickle.dump({"fingerprint": fingerprint, "embeddings": embeddings, "normalized_embeddings": normalized_embeddings}, f)
 
-    return embeddings
+    return embeddings, normalized_embeddings
 
 
-def cosine_similarity(query_vec, chunk_vecs):
+def cosine_similarity(query_vec, normalized_chunk_vecs):
     """Measures how close the query's meaning is to each chunk's meaning.
 
     Cosine similarity compares the ANGLE between two vectors, not their length -
     so it captures 'do these mean similar things' rather than 'are these the same
     length of text.' Result ranges from -1 (opposite meaning) to 1 (identical meaning).
     """
-    query_norm = query_vec / np.linalg.norm(query_vec)
-    chunk_norms = chunk_vecs / np.linalg.norm(chunk_vecs, axis=1, keepdims=True)
-    return chunk_norms @ query_norm  # dot product of normalized vectors = cosine similarity
+    query_norm = np.linalg.norm(query_vec)
+    if query_norm == 0:
+        return np.zeros(len(normalized_chunk_vecs), dtype=np.float32)
+
+    normalized_query = query_vec / query_norm
+    return normalized_chunk_vecs @ normalized_query  # dot product of normalized vectors = cosine similarity
 
 
-def semantic_search(query, chunks, chunk_embeddings, n=5):
+def semantic_search(query, chunks, chunk_embeddings, normalized_chunk_embeddings=None, n=5):
     """Finds the n chunks whose meaning is closest to the query's meaning."""
-    query_embedding = np.array(embed_text(query))
-    scores = cosine_similarity(query_embedding, chunk_embeddings)
+    query_embedding = np.asarray(embed_text(query), dtype=np.float32)
+    if normalized_chunk_embeddings is None:
+        normalized_chunk_embeddings = normalize_vectors(chunk_embeddings)
 
-    top_indices = np.argsort(scores)[::-1][:n]  # sort descending, take top n
+    scores = cosine_similarity(query_embedding, normalized_chunk_embeddings)
+
+    if len(scores) <= n:
+        top_indices = np.argsort(scores)[::-1]
+    else:
+        top_indices = np.argpartition(scores, -n)[-n:]
+        top_indices = top_indices[np.argsort(scores[top_indices])[::-1]]
+
     return [chunks[i] for i in top_indices]
 
 
 def ask_strict_ai(query, relevant_chunks):
     """Sends the context and question to Ollama with a strict system jail."""
-    context_text = "\n\n".join([f"[Source: {c['source']}]\n{c['text']}" for c in relevant_chunks])
+    context_text = build_context_text(relevant_chunks)
 
     system_prompt = (
         "You are a strict data assistant. You must answer the user's question relying "
@@ -142,7 +170,7 @@ def main():
         return
 
     print(f"✅ Loaded {len(chunks)} chunks. Preparing embeddings...")
-    chunk_embeddings = build_or_load_embeddings(chunks)
+    chunk_embeddings, normalized_chunk_embeddings = build_or_load_embeddings(chunks)
 
     print("✅ System Ready! Ask a question or type 'exit'.")
 
@@ -151,7 +179,7 @@ def main():
         if query.lower() in ['exit', 'quit']:
             break
 
-        top_chunks = semantic_search(query, chunks, chunk_embeddings, n=5)
+        top_chunks = semantic_search(query, chunks, chunk_embeddings, normalized_chunk_embeddings=normalized_chunk_embeddings, n=5)
 
         answer = ask_strict_ai(query, top_chunks)
         print(f"\n🤖 AI Answer:\n{answer}")

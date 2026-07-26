@@ -6,3 +6,4 @@ langchain-text-splitters
 youtube-transcript-api
 beautifulsoup4
 requests
+pytest
